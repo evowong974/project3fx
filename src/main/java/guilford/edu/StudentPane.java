@@ -39,9 +39,9 @@ public class StudentPane extends GridPane {
         totalButton = new Button("Calculate Total Credits");
 
         // Instantiate ImagaView attribute 
-        File avatar = new File(this.getClass().getResource("GuilfordTree.jpeg")
+        File avatar = new File(this.getClass().getResource("GuilfordTree.jpg")
         .getPath());
-        System.out.println(avatar.toURI().toString());
+        this.imageView = new ImageView(avatar.toURI().toString());
         // Instantiate Labels
         this.nameLabel = new Label("Name: ");
         this.emailLabel = new Label("Email: ");

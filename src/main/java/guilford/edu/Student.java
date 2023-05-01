@@ -15,11 +15,10 @@ public class Student {
 
     // constructor 
     public Student() {
-        this.name = "";
-        this.email = "";
-        this. gNumber = 0;
-        this.guilfordCredits = 0;
-        this.transferCredits = 0;
+        name = "Evan Wong";
+        email = "ewong@guilford.edu";
+        guilfordCredits = 90;
+        this.transferCredits = 10;
         this.totalCredits = 0;
 
     }
@@ -52,6 +51,8 @@ public class Student {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    // getters and setters
 
     // getters and setters
 
@@ -97,11 +98,6 @@ public class Student {
         this.totalCredits = guilfordCredits + transferCredits;
     }   
 
-    // method that formats gNumber by adding a G to the front of the number
-    public String formatGNumber(int gNumber) {
-        String formattedGNumber = "G" + gNumber;
-        return formattedGNumber;
-    }
 
 
 
