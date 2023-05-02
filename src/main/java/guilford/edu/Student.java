@@ -1,106 +1,76 @@
 package guilford.edu;
 
-import java.util.Random;
-
 public class Student {
-    Random rand = new Random();
+// attributes
+private String name; 
+private String email;
+private String studentYear;
+private boolean studyAway;
+private int graduationYear;
+ 
+// constructor with default data
+public Student() {
+    this.name = "Evan Wong";
+    this.email = "ewong@guilford.edu";
+    this.studentYear = "Sophmore";
+    this.studyAway = false;
+    this.graduationYear = 2025; 
+}
 
-    // attributes
-    private String name;
-    private String email;
-    private int gNumber;
-    private int guilfordCredits;
-    private int transferCredits;
-    private int totalCredits;
+// constructor with parameters
+public Student(String name, String email, String studentYear, boolean studyAway, int graduationYear) {
+    this.name = name;
+    this.email = email;
+    this.studentYear = studentYear;
+    this.studyAway = studyAway;
+    this.graduationYear = graduationYear;
+}
 
-    // constructor 
-    public Student() {
-        name = "Evan Wong";
-        email = "ewong@guilford.edu";
-        guilfordCredits = 90;
-        this.transferCredits = 10;
-        this.totalCredits = 0;
+// getters and setters
+public String getName() {
+    return name;
+}
 
-    }
+public void setName(String name) {
+    this.name = name;
+}
 
-    // constructor 
-    public Student(String name, String email, int guilfordCredits, int transferCredits) {
-        this.name = name;
-        this.email = email;
-        this.guilfordCredits = guilfordCredits;
-        this.transferCredits = transferCredits;
-        this.totalCredits = guilfordCredits + transferCredits;
-    }
+public String getEmail() {
+    return email;
+}
 
-    // getters and setters
+public void setEmail(String email) {
+    this.email = email;
+}
 
-    public String getName() {
-        return this.name;
-    }
+public String getStudentYear() {
+    return studentYear;
+}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+public void setStudentYear(String studentYear) {
+    this.studentYear = studentYear;
+}
 
-    // getters and setters
+public boolean isStudyAway() {
+    return studyAway;
+}
 
-    public String getEmail() {
-        return this.email;
-    }
+public void setStudyAway(boolean studyAway) {
+    this.studyAway = studyAway;
+}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+public int getGraduationYear() {
+    return graduationYear;
+}
 
-    // getters and setters
+public void setGraduationYear(int graduationYear) {
+    this.graduationYear = graduationYear;
+}
 
-    // getters and setters
-
-    public int getGuilfordCredits() {
-        return this.guilfordCredits;
-    }
-
-    public void setGuilfordCredits(int guilfordCredits) {
-        this.guilfordCredits = guilfordCredits;
-    }
-
-    // getters and setters
-
-    public int getTransferCredits() {
-        return this.transferCredits;
-    }
-
-    public void setTransferCredits(int transferCredits) {
-        this.transferCredits = transferCredits;
-    }
-
-    // getters and setters
-
-    public int getTotalCredits() {
-        return this.totalCredits;
-    }
-
-    public void setTotalCredits(int totalCredits) {
-        this.totalCredits = totalCredits;
-    }
-
-    // toString method
-    @Override
-
-    public String toString() {
-        return "{" + " name='" + getName() + "'" + ", email='" + getEmail() + "'" + ", guilfordCredits='"
-                + getGuilfordCredits() + "'" + ", transferCredits='" + getTransferCredits() + "'" + ", totalCredits='"
-                + getTotalCredits() + "'" + "}";
-    }
-
-    // method that adds guilfordCredits and transferCredits to the total credits
-    public void addCredits(int guilfordCredits, int transferCredits) {
-        this.totalCredits = guilfordCredits + transferCredits;
-    }   
-
-
-
-
-
-
+// toString method
+@Override
+public String toString() {
+    return "Student [email=" + email + ", graduationYear=" + graduationYear + ", name=" + name + ", studentYear="
+            + studentYear + ", studyAway=" + studyAway + "]";
+}
 }
